@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Grande', Helvetica, Arial;
+}
+
+.tab::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px;
+}
+
+.tab::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+.tab::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff;
+}
+
+.tab::-webkit-scrollbar-button {
+    display:none;
+}
+
+table::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px;
+}
+
+table::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+table::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff;
+}
+
+table::-webkit-scrollbar-button {
+    display:none;
+}
+
+h1 {
+    display: block;
+    font-size: 18px;
+    margin: 0;
+    padding: 5px 0;
+}
+
+h2 {
+    display: block;
+    font-size: 18px;
+    margin: 0;
+    padding: 5px 0;
+}
+
+header {
+    height: 50px;
+    background: #B5B5B5;
+    border-bottom: 2px solid #919697;
+}
+
+main {
+    display: flex;
+}
+
+#drawer {
+    background: #F4F5F5;
+    width: 300px;
+    height: 100vh;
+    position: relative;
+}
+
+#drawer h1 {
+    cursor: pointer;
+    padding: 8px 8px;
+}
+
+#drawer h1:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    color: black;
+}
+
+#drawer .tabMenu {
+    background: #F4F5F5;
+}
+
+#drawer .tabMenu div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#drawer .categoryMenu {
+    height: 150px;
+}
+
+#content {
+    display: flex;
+}
+
+.tab {
+    background: white;
+    height: calc(100vh - 50px);
+    width: 400px;
+    border-right: 1px solid #E6E6E6;
+    position: relative;
+    overflow: auto;
+    padding: 8px 8px;
+}
+
+.tabDrawer {
+    background: #F4F5F5;
+    height: calc(100vh - 50px);
+    width: 300px;
+    border-right: 1px solid #E6E6E6;
+    position: relative;
+    overflow: auto;
+    padding: 8px 8px;
+}
+
+.tab h2 {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.tab h2:hover {
+    background: #DCDCDC;
+}
+
+.tableWrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.tabMenu {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    align-items: center;
+    display: flex;
+}
+
+table {
+    display: block;
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+    border-right: 1px solid #E6E6E6;
+}
+
+table thead tr {
+    background: #E9E9EB;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th,
+table td {
+    padding: 12px 30px;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.menu {
+    width: 100%;
+    height: 53px;
+    background: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.menu .tabMenu {
+    position: absolute;
+    top: -251px;
+    width: 100%;
+    height: 250px;
+    background: #E2E5E4;
+}
+
+.categoryMenu {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 150px;
+    background: #F4F5F5;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+
+    transform-origin: 50% 0;
+    animation: append-animate .3s linear;
+}
+
+.categoryMenu input {
+    margin-top: 15px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+.options{
+    margin-top: auto;
+    margin-bottom: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.close {
+    width: 110px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    font-size: 16px;
+    color: black;
+    border: none;
+    padding: 8px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add {
+    width: 110px;
+    background: #007AFF;
+    border-radius: 7px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    padding: 8px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background: #B5B5B5;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    border-top: 2px solid #919697;
+}
+
+.menuHeader {
+    width: 100%;
+    border-bottom: 2px solid #919697;
+}
+
+.menuHeader p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btnOpt {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.btnOpt svg {
+    width: 100%;
+    height: 100%;
+}
+
+table .categoryMenu {
+    height: 250px;
+    align-items: baseline;
+}
+
+.inputContainer {
+    display: flex;
+}
+
+.inputContainer input {
+    width: 160px;
+}
+
+.inputContainer :first-child {
+    margin-right: 15px;
+}
+
+.tableHeadItem {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.contentHeader {
+    position: absolute;
+    right: 5px;
+}
+
+
+@keyframes append-animate {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+tr {
+    position: relative;
+}
+
+tr:hover .delete {
+    opacity: 1;
+    cursor: pointer;
+    display: block;
+}
+
+tr:hover .createSalesItem {
+    opacity: 1;
+    cursor: pointer;
+    display: block;
+}
+
+.delete {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-44%);
+    display: none;
+}
+
+.delete:hover svg path {
+    fill: red;
+}
+
+.createSalesItem {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-44%);
+    display: none;
+}
+
+.createSalesItem:hover svg path {
+    fill: green;
+}
+
+#sales .menu {
+    justify-content: space-between;
+}
+
+#sales h3 {
+    font-weight: normal;
+    margin-right: 8px;
+}
+
+#sales h3 span {
+    font-weight: bold;
+}
