@@ -33,7 +33,7 @@ function addDrawer() {
     let groups = document.createElement("div")
     groups.setAttribute("class", "tabDrawer")
 
-    getData("http://localhost:5000/group/").then((response) => {
+    getData("http://localhost:3000/group/").then((response) => {
         response.forEach(item => {
             let h = document.createElement("h1")
             h.setAttribute("id", `group-${item.id}`)
@@ -132,7 +132,7 @@ let tabsID = 0
 function createTab(id) {
     let content = document.getElementById("content")
 
-    getData(`http://localhost:5000/category/${id}`).then((response) => {
+    getData(`http://localhost:3000/category/${id}`).then((response) => {
         let tab = document.createElement("div")
         let category = document.createElement("div")
         category.setAttribute("class", "category")
@@ -258,7 +258,7 @@ function createDataBase(id) {
         {name: "Price", type: "price"}, {name: "Count", type: "count"}]
     let content = document.getElementById("content")
 
-    getData(`http://localhost:5000/product/${id}`).then((response) => {
+    getData(`http://localhost:3000/product/${id}`).then((response) => {
         let wrapper = document.createElement("div")
         wrapper.setAttribute("id", `db${++dbIdx}`)
         let menu = document.createElement("div")
@@ -401,7 +401,7 @@ function createSalesBase() {
         {name: "Date", type: "date"}]
     let content = document.getElementById("content")
 
-    getAllSales(`http://localhost:5000/sales/`).then((response) => {
+    getAllSales(`http://localhost:3000/sales/`).then((response) => {
         let wrapper = document.createElement("div")
         wrapper.setAttribute("id", "sales")
         let menu = document.createElement("div")
@@ -502,7 +502,7 @@ function getData(url) {
 }
 
 function createGroup(name) {
-    return fetch('http://localhost:5000/group/', {
+    return fetch('http://localhost:3000/group/', {
         method: 'POST',
         body: JSON.stringify({
             name: name
@@ -518,7 +518,7 @@ function createGroup(name) {
 }
 
 function createCategory(name, groupID) {
-    return fetch('http://localhost:5000/category/', {
+    return fetch('http://localhost:3000/category/', {
         method: 'POST',
         body: JSON.stringify({
             name: name,
@@ -535,7 +535,7 @@ function createCategory(name, groupID) {
 }
 
 function createProduct(name, price, count, categoryID) {
-    return fetch('http://localhost:5000/product/', {
+    return fetch('http://localhost:3000/product/', {
         method: 'POST',
         body: JSON.stringify({
             name: name,
@@ -554,7 +554,7 @@ function createProduct(name, price, count, categoryID) {
 }
 
 function getAllSales() {
-    return fetch('http://localhost:5000/sales/', {
+    return fetch('http://localhost:3000/sales/', {
         method: 'GET',
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -567,7 +567,7 @@ function getAllSales() {
 }
 
 function deleteProduct(id) {
-    return fetch('http://localhost:5000/product/', {
+    return fetch('http://localhost:3000/product/', {
         method: 'DELETE',
         body: JSON.stringify({
            id: id
@@ -583,7 +583,7 @@ function deleteProduct(id) {
 }
 
 function createSales(id) {
-    return fetch('http://localhost:5000/sales/', {
+    return fetch('http://localhost:3000/sales/', {
         method: 'POST',
         body: JSON.stringify({
             id: id
