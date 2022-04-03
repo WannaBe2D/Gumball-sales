@@ -31,7 +31,7 @@ app.get('/', async(req, res) => {
     res.sendFile(join(__dirname, 'frontend/index.html'));
 });
 
-app.listen(PORT, async () => {
+app.listen(process.env.PORT || 3000, async () => {
     await db.read()
     db.data = db.data || { groups: [], category: [], products: [], sales: [] }
     await db.write()
