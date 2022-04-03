@@ -11,7 +11,7 @@ import salesRouter from "./routers/salesRouter.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const PORT = 3000;
+const PORT = 8000;
 const corsOptions = {
     origin: '*',
     optionsSuccessStatus: 200,
