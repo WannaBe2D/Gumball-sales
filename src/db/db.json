@@ -1,6 +1,38 @@
 {
-  "groups": [],
-  "category": [],
-  "products": [],
+  "groups": [
+    {
+      "id": 1,
+      "name": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Computers"
+    },
+    {
+      "id": 3,
+      "name": "Smart Home"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Camera & Photo",
+      "groupID": 1
+    },
+    {
+      "id": 2,
+      "name": "Headphones",
+      "groupID": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple AirPods",
+      "price":100,
+      "count": 3,
+      "categoryID": 1
+    }
+  ],
   "sales": []
 }

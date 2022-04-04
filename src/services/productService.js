@@ -8,7 +8,7 @@ class ProductService {
 
         const product = { id: db.data.products.length + 1, name: name,
             price: Number(price) || 100, count: count || 1,
-            categoryID: Number(categoryID) || null}
+            categoryID: Number(categoryID) || null }
         db.data.products.push(product)
 
         await db.write()
