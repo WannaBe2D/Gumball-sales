@@ -258,7 +258,7 @@ function createDataBase(id) {
         {name: "Price", type: "price"}, {name: "Count", type: "count"}]
     let content = document.getElementById("content")
 
-    getData(`https://gumballsales.herokuapp.com//${id}`).then((response) => {
+    getData(`https://gumballsales.herokuapp.com/${id}`).then((response) => {
         let wrapper = document.createElement("div")
         wrapper.setAttribute("id", `db${++dbIdx}`)
         let menu = document.createElement("div")
@@ -518,7 +518,7 @@ function createGroup(name) {
 }
 
 function createCategory(name, groupID) {
-    return fetch('https://gumballsales.herokuapp.com//category/', {
+    return fetch('https://gumballsales.herokuapp.com/category/', {
         method: 'POST',
         body: JSON.stringify({
             name: name,
